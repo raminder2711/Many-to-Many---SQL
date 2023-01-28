@@ -2,7 +2,7 @@
 # SQL PROJECT - DATA MANIPULATION
 ------
 ## This project covers
---------
+
 ####    1 - Creating a Database
 ####    2 - Creating Multiple tables
 ####    3 - Entering records in the tables
