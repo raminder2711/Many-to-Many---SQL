@@ -230,4 +230,19 @@ We can get the same by using IF
  
 ![image](https://user-images.githubusercontent.com/119749518/215284030-8d90f5a0-db61-47e1-925d-309fecb47687.png)
 
+
+Let's combine all 3 tables and get Title, rating and Reviewer
+
+    SELECT
+        title AS Title,
+        rating AS Rating,
+        CONCAT(first_name, ' ', last_name) AS Reviewer
+    FROM
+        series
+    JOIN reviews ON series.id = reviews.series_id
+    JOIN reviewers ON reviewers.id = reviews.reviewer_id;
     
+  ![image](https://user-images.githubusercontent.com/119749518/215284879-eefbb92f-9b15-4b74-908b-fd9391dfd085.png)
+
+
+-----------------------THANK YOU------------------------
