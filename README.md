@@ -103,5 +103,5 @@ find avg rating of all titles
     FROM series JOIN reviews ON series.id = reviews.series_id
     GROUP BY title;
     
-    ![average rating](https://user-images.githubusercontent.com/119749518/215277817-2a02a920-570a-48d4-a935-0cd0c450be09.png)
+  ![average rating](https://user-images.githubusercontent.com/119749518/215277817-2a02a920-570a-48d4-a935-0cd0c450be09.png)
 
