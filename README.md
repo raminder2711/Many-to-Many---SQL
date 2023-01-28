@@ -72,7 +72,11 @@ Insert data in 3 tables
         (10,5,9.9),
         (13,3,8.0),(13,4,7.2),
         (14,2,8.5),(14,3,8.9),(14,4,8.9);
-    
+        
+Show Tables
+
+    SHOW TABLES;
+
     
 checking structures of tables
 
@@ -81,4 +85,23 @@ checking structures of tables
     DESC reviews;
     
     DESC series;
+    
+Let's check the data as well
+
+    SELECT * FROM reviewers;
+
+    SELECT * FROM reviews;
+    
+    SELECT * FROM series;
+    
+    
+nOW LETSS PLAY
+
+find avg rating of all titles
+
+    SELECT title, AVG(rating) AS Average_rating
+    FROM series JOIN reviews ON series.id = reviews.series_id
+    GROUP BY title;
+    
+    
     
