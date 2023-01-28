@@ -1,13 +1,15 @@
 # Many-to-Many---SQL
 
-Create a new Database rev
+Creating of thee
+
+## Create a new Database named as 'revs'
 
     CREATE DATABASE revs;
     
   ![DB](https://user-images.githubusercontent.com/119749518/215277864-28df7ddc-9656-474e-a07f-dc388de6da26.png)
 
 
-Create 3 tables
+## Creating 3 new tables in the newly created database
 
     CREATE TABLE reviewers (
         id INT PRIMARY KEY AUTO_INCREMENT,
@@ -37,7 +39,7 @@ Create 3 tables
 ![table creation 2](https://user-images.githubusercontent.com/119749518/215277908-12e08f65-17d2-4a88-9aed-66736b34cf02.png)
 
 
-Insert data in 3 tables
+## Inserting rows in the 3 tables created
 
     INSERT INTO series (title, released_year, genre) VALUES
         ('Archer', 2009, 'Animation'),
@@ -83,14 +85,14 @@ Insert data in 3 tables
 ![insert values 1](https://user-images.githubusercontent.com/119749518/215277919-9cc9977e-0b7d-4968-9d26-5669c1ded2d9.png)
 
 
-Show Tables
+## Let's check if the tables are created
 
     SHOW TABLES;
 
 ![show tables](https://user-images.githubusercontent.com/119749518/215277936-34e85e8a-0536-4e64-aa92-51286a63212c.png)
 
     
-checking structures of tables
+## Let's check the structure of tables
 
     DESC reviewers;
     
@@ -102,7 +104,7 @@ checking structures of tables
 ![str(reviews)](https://user-images.githubusercontent.com/119749518/215277953-9e274ef7-a780-4419-adfb-4bc6b730eb4b.png)
 ![str(series)](https://user-images.githubusercontent.com/119749518/215277954-78dbd376-b1ed-4c1e-85e9-001660866ed8.png)
  
-Let's check the data as well
+## Let's check if the records are created in the 3 tables
 
     SELECT * FROM reviewers;
 
@@ -118,9 +120,9 @@ Let's check the data as well
 
 
 
-nOW LETSS PLAY
+## Now the data is ready for manipulation
 
-find avg rating of all titles and sorted by lowest to highest
+### The Average Rating of all titles which are sorted by lowest to highest
 
     SELECT
         title,
@@ -135,7 +137,7 @@ find avg rating of all titles and sorted by lowest to highest
     
 ![image](https://user-images.githubusercontent.com/119749518/215279026-959493f9-d27f-4c54-97f0-e8785f47c1a5.png)
 
-We can round the rating by using Round
+### The rating seems far stretched, using ROUND function to correct it
 
     SELECT
         title,
@@ -151,7 +153,7 @@ We can round the rating by using Round
 ![image](https://user-images.githubusercontent.com/119749518/215279250-543637df-afd9-4a27-8eaf-abbe47c1cd16.png)
    
     
- now join reviewer with reviews 
+##  JOIN 2 tables to get some info 
  
      SELECT
         CONCAT(first_name, ' ', last_name) AS 'Name of Reviewer',
@@ -162,7 +164,7 @@ We can round the rating by using Round
  
  ![image](https://user-images.githubusercontent.com/119749518/215279522-9a4638da-72ff-4c18-9fb8-da562d757753.png)
 
-find a title with no reviews
+## Now, find those titles with no reviews
 
     SELECT
         title
@@ -174,7 +176,7 @@ find a title with no reviews
         
     ![image](https://user-images.githubusercontent.com/119749518/215280017-3e12d731-f4b4-4b7a-9b3b-6f48d4162d39.png)
 
-Average rating by genre
+## Average rating by Genre
 
     SELECT
         genre AS Genre,
@@ -188,7 +190,7 @@ Average rating by genre
    ![image](https://user-images.githubusercontent.com/119749518/215280629-72752440-4aaa-4d54-9587-04ff91c8af5e.png)
 
  
-Reviewer average rating and status  (Using Case)
+## Case Function Usage - Finding Reviewer, Total number of times the reviews were provided from a single reviewer, Minimum rating, Maximum rating, Average rating and Status column to show different statuses based on rating
 
     SELECT
         CONCAT(first_name, ' ', last_name) AS Reviewer,
@@ -211,7 +213,7 @@ Reviewer average rating and status  (Using Case)
  
 ![image](https://user-images.githubusercontent.com/119749518/215283271-56f6c5f4-481a-47a9-a4ac-f713c5382796.png)
 
-We can get the same by using IF
+## The same result can also be achieved by using IF function
 
     SELECT
             CONCAT(first_name, ' ', last_name) AS Reviewer,
@@ -231,7 +233,7 @@ We can get the same by using IF
 ![image](https://user-images.githubusercontent.com/119749518/215284030-8d90f5a0-db61-47e1-925d-309fecb47687.png)
 
 
-Let's combine all 3 tables and get Title, rating and Reviewer
+## Combining 3 tables with JOIN to get Title, rating and Reviewer
 
     SELECT
         title AS Title,
@@ -245,4 +247,4 @@ Let's combine all 3 tables and get Title, rating and Reviewer
   ![image](https://user-images.githubusercontent.com/119749518/215284879-eefbb92f-9b15-4b74-908b-fd9391dfd085.png)
 
 
------------------------THANK YOU------------------------
+# -----------------------THANK YOU------------------------
