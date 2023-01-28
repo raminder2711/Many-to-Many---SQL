@@ -122,11 +122,34 @@ nOW LETSS PLAY
 
 find avg rating of all titles and sorted by lowest to highest
 
-    SELECT title, AVG(rating) AS Average_rating
-    FROM series JOIN reviews ON series.id = reviews.series_id
-    GROUP BY title
-    ORDER BY Average_rating;
+    SELECT
+        title,
+        AVG(rating) AS Average_rating
+    FROM
+        series
+    JOIN reviews ON series.id = reviews.series_id
+    GROUP BY
+        title
+    ORDER BY
+        Average_rating;
     
 ![image](https://user-images.githubusercontent.com/119749518/215279026-959493f9-d27f-4c54-97f0-e8785f47c1a5.png)
 
+We can round the rating by using Round
 
+    SELECT
+        title,
+        ROUND(AVG(rating), 2) AS Average_rating     
+    FROM
+        series
+    JOIN reviews ON series.id = reviews.series_id
+    GROUP BY
+        title
+    ORDER BY
+        Average_rating;
+    
+![image](https://user-images.githubusercontent.com/119749518/215279250-543637df-afd9-4a27-8eaf-abbe47c1cd16.png)
+   
+    
+    
+    
