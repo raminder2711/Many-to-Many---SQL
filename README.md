@@ -188,9 +188,28 @@ Average rating by genre
    ![image](https://user-images.githubusercontent.com/119749518/215280629-72752440-4aaa-4d54-9587-04ff91c8af5e.png)
 
  
+Reviewer average rating and status  (Using Case)
+
+    SELECT
+        CONCAT(first_name, ' ', last_name) AS Reviewer,
+        COUNT(rating) AS COUNT,
+        IFNULL(MIN(rating), 0) AS MIN,
+        IFNULL(MAX(rating), 0) AS MAX,
+        IFNULL(ROUND(AVG(rating), 2), 0) AS Average,
+        CASE WHEN COUNT(rating) > 0 THEN 'ACTIVE' ELSE 'INACTIVE'
+    END AS STATUS
+    FROM
+        reviewers
+    LEFT JOIN reviews ON reviewers.id = reviews.reviewer_id
+    GROUP BY
+        Reviewer
+    ORDER BY
+    STATUS;
+
  
- 
- 
+![image](https://user-images.githubusercontent.com/119749518/215283271-56f6c5f4-481a-47a9-a4ac-f713c5382796.png)
+
+
  
  
     
