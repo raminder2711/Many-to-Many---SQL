@@ -213,20 +213,20 @@ Reviewer average rating and status  (Using Case)
 
 We can get the same by using IF
 
-SELECT
-        CONCAT(first_name, ' ', last_name) AS Reviewer,
-        COUNT(rating) AS COUNT,
-        IFNULL(MIN(rating), 0) AS MIN,
-        IFNULL(MAX(rating), 0) AS MAX,
-        IFNULL(ROUND(AVG(rating), 2), 0) AS Average,
-        IF(COUNT(rating) > 0, 'ACTIVE', 'INACTIVE') AS status           # using IF and not CASE
-    FROM
-        reviewers
-    LEFT JOIN reviews ON reviewers.id = reviews.reviewer_id
-    GROUP BY
-        Reviewer
-    ORDER BY
-    STATUS;
+    SELECT
+            CONCAT(first_name, ' ', last_name) AS Reviewer,
+            COUNT(rating) AS COUNT,
+            IFNULL(MIN(rating), 0) AS MIN,
+            IFNULL(MAX(rating), 0) AS MAX,
+            IFNULL(ROUND(AVG(rating), 2), 0) AS Average,
+            IF(COUNT(rating) > 0, 'ACTIVE', 'INACTIVE') AS status           # using IF and not CASE
+        FROM
+            reviewers
+        LEFT JOIN reviews ON reviewers.id = reviews.reviewer_id
+        GROUP BY
+            Reviewer
+        ORDER BY
+        STATUS;
  
  
     
