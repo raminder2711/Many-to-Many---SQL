@@ -6,11 +6,11 @@ Create a new Database rev
 
 Create 3 tables
 
-CREATE TABLE reviewers (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    first_name VARCHAR(50) NOT NULL,
-    last_name VARCHAR(50) NOT NULL
-);
+    CREATE TABLE reviewers (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        first_name VARCHAR(50) NOT NULL,
+        last_name VARCHAR(50) NOT NULL
+    );
  
 CREATE TABLE series (
     id INT PRIMARY KEY AUTO_INCREMENT,
