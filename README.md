@@ -151,5 +151,23 @@ We can round the rating by using Round
 ![image](https://user-images.githubusercontent.com/119749518/215279250-543637df-afd9-4a27-8eaf-abbe47c1cd16.png)
    
     
-    
+ now join reviewer with reviews 
+ 
+     SELECT
+        CONCAT(first_name, ' ', last_name) AS 'Name of Reviewer',
+        rating
+    FROM
+        reviewers
+    JOIN reviews ON reviewers.id = reviews.reviewer_id;
+ 
+ ![image](https://user-images.githubusercontent.com/119749518/215279522-9a4638da-72ff-4c18-9fb8-da562d757753.png)
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
     
