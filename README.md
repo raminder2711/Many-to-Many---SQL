@@ -1,12 +1,13 @@
+------
 # SQL PROJECT - DATA MANIPULATION
-
+------
 ## This project covers
 --------
 ####    1 - Creating a Database
 ####    2 - Creating Multiple tables
 ####    3 - Entering records in the tables
 ####    4 - Show of tables, structure of tables
-####    5 - JOINS (INNER, LEFT), Aggregate Functions, IFNULL, CASE, IF
+####    5 - JOINS (INNER, LEFT), Aggregate Functions, IFNULL, CASE, IF, Sorting
 
 -----------
 
