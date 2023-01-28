@@ -3,6 +3,9 @@
 Create a new Database rev
 
     CREATE DATABASE revs;
+    
+  ![DB](https://user-images.githubusercontent.com/119749518/215277864-28df7ddc-9656-474e-a07f-dc388de6da26.png)
+
 
 Create 3 tables
 
@@ -29,6 +32,10 @@ Create 3 tables
         FOREIGN KEY (reviewer_id)           #adding Foreign key Constrain
             REFERENCES reviewers (id)       #referencing to series table, id column
     );
+
+![table creation 1](https://user-images.githubusercontent.com/119749518/215277900-a704ef23-3f91-47b6-8414-446c5d6bc70b.png)
+![table creation 2](https://user-images.githubusercontent.com/119749518/215277908-12e08f65-17d2-4a88-9aed-66736b34cf02.png)
+
 
 Insert data in 3 tables
 
@@ -73,9 +80,14 @@ Insert data in 3 tables
         (13,3,8.0),(13,4,7.2),
         (14,2,8.5),(14,3,8.9),(14,4,8.9);
         
+![insert values 1](https://user-images.githubusercontent.com/119749518/215277919-9cc9977e-0b7d-4968-9d26-5669c1ded2d9.png)
+
+
 Show Tables
 
     SHOW TABLES;
+
+![show tables](https://user-images.githubusercontent.com/119749518/215277936-34e85e8a-0536-4e64-aa92-51286a63212c.png)
 
     
 checking structures of tables
@@ -85,7 +97,11 @@ checking structures of tables
     DESC reviews;
     
     DESC series;
-    
+
+![Str(reviewers)](https://user-images.githubusercontent.com/119749518/215277951-5a405a5a-f8ef-4f00-bc52-550be54349b7.png)
+![str(reviews)](https://user-images.githubusercontent.com/119749518/215277953-9e274ef7-a780-4419-adfb-4bc6b730eb4b.png)
+![str(series)](https://user-images.githubusercontent.com/119749518/215277954-78dbd376-b1ed-4c1e-85e9-001660866ed8.png)
+ 
 Let's check the data as well
 
     SELECT * FROM reviewers;
@@ -94,7 +110,14 @@ Let's check the data as well
     
     SELECT * FROM series;
     
-    
+ ![reviewers table data](https://user-images.githubusercontent.com/119749518/215277986-1ec58eaa-351d-4ca7-ab2d-d10cbee48340.png)
+
+ ![reviews table data](https://user-images.githubusercontent.com/119749518/215277997-56dac8c3-83a0-443b-8cac-d7fe184c375a.png)
+
+ ![series table data](https://user-images.githubusercontent.com/119749518/215278006-fc36c5f8-ebb1-4516-89b1-ae7c820d9356.png)
+
+
+
 nOW LETSS PLAY
 
 find avg rating of all titles
