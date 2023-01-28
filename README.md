@@ -2,7 +2,7 @@
 
 Create a new Database rev
 
-CREATE DATABASE revs;
+    CREATE DATABASE revs;
 
 Create 3 tables
 
