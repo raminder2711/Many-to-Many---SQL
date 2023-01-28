@@ -1,6 +1,14 @@
-# Many-to-Many---SQL
+# SQL PROJECT - DATA MANIPULATION
 
-Creating of thee
+## This project covers
+--------
+####    1 - Creating a Database
+####    2 - Creating Multiple tables
+####    3 - Entering records in the tables
+####    4 - Show of tables, structure of tables
+####    5 - JOINS (INNER, LEFT), Aggregate Functions, IFNULL, CASE, IF
+
+-----------
 
 ## Create a new Database named as 'revs'
 
@@ -29,7 +37,7 @@ Creating of thee
         rating DECIMAL(2 , 1 ),
         series_id INT,
         reviewer_id INT,
-        FOREIGN KEY (series_id)             #adding Foreign key Constrain
+        FOREIGN KEY (series_id)             #adding Foreign key Constraint
             REFERENCES series (id),         #referencing to series table, id column  
         FOREIGN KEY (reviewer_id)           #adding Foreign key Constrain
             REFERENCES reviewers (id)       #referencing to series table, id column
@@ -119,9 +127,9 @@ Creating of thee
  ![series table data](https://user-images.githubusercontent.com/119749518/215278006-fc36c5f8-ebb1-4516-89b1-ae7c820d9356.png)
 
 
-
+--------
 ## Now the data is ready for manipulation
-
+--------
 ### The Average Rating of all titles which are sorted by lowest to highest
 
     SELECT
@@ -153,7 +161,7 @@ Creating of thee
 ![image](https://user-images.githubusercontent.com/119749518/215279250-543637df-afd9-4a27-8eaf-abbe47c1cd16.png)
    
     
-##  JOIN 2 tables to get some info 
+##  JOIN 2 tables to find the rating provided by each Reviewer
  
      SELECT
         CONCAT(first_name, ' ', last_name) AS 'Name of Reviewer',
@@ -164,7 +172,7 @@ Creating of thee
  
  ![image](https://user-images.githubusercontent.com/119749518/215279522-9a4638da-72ff-4c18-9fb8-da562d757753.png)
 
-## Now, find those titles with no reviews
+## Finding such titles where reviews were not provided
 
     SELECT
         title
@@ -233,7 +241,7 @@ Creating of thee
 ![image](https://user-images.githubusercontent.com/119749518/215284030-8d90f5a0-db61-47e1-925d-309fecb47687.png)
 
 
-## Combining 3 tables with JOIN to get Title, rating and Reviewer
+## Combining 3 tables with JOIN to get Title, Rating and Reviewer
 
     SELECT
         title AS Title,
@@ -248,3 +256,4 @@ Creating of thee
 
 
 # -----------------------THANK YOU------------------------
+
