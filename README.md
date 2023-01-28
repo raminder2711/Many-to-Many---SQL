@@ -196,7 +196,9 @@ Reviewer average rating and status  (Using Case)
         IFNULL(MIN(rating), 0) AS MIN,
         IFNULL(MAX(rating), 0) AS MAX,
         IFNULL(ROUND(AVG(rating), 2), 0) AS Average,
-        CASE WHEN COUNT(rating) > 0 THEN 'ACTIVE' ELSE 'INACTIVE'
+     CASE 
+        WHEN COUNT(rating) > 0 THEN 'ACTIVE' 
+        ELSE 'INACTIVE'
     END AS STATUS
     FROM
         reviewers
@@ -217,7 +219,7 @@ SELECT
         IFNULL(MIN(rating), 0) AS MIN,
         IFNULL(MAX(rating), 0) AS MAX,
         IFNULL(ROUND(AVG(rating), 2), 0) AS Average,
-        <u>IF(COUNT(rating) > 0, 'ACTIVE', 'INACTIVE') AS status</u>
+        IF(COUNT(rating) > 0, 'ACTIVE', 'INACTIVE') AS status           # using IF and not CASE
     FROM
         reviewers
     LEFT JOIN reviews ON reviewers.id = reviews.reviewer_id
