@@ -162,8 +162,31 @@ We can round the rating by using Round
  
  ![image](https://user-images.githubusercontent.com/119749518/215279522-9a4638da-72ff-4c18-9fb8-da562d757753.png)
 
- 
- 
+find a title with no reviews
+
+    SELECT
+        title
+    FROM
+        series
+    LEFT JOIN reviews ON series.id = reviews.series_id
+    WHERE
+        rating IS NULL;
+        
+    ![image](https://user-images.githubusercontent.com/119749518/215280017-3e12d731-f4b4-4b7a-9b3b-6f48d4162d39.png)
+
+Average rating by genre
+
+    SELECT
+        genre AS Genre,
+        ROUND(AVG(rating), 2) AS 'Average Rating'
+    FROM
+        series
+    JOIN reviews ON series.id = reviews.series_id
+    GROUP BY
+        genre;
+        
+   ![image](https://user-images.githubusercontent.com/119749518/215280629-72752440-4aaa-4d54-9587-04ff91c8af5e.png)
+
  
  
  
